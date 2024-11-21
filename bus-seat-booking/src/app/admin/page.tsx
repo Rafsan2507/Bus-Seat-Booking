@@ -1,12 +1,10 @@
 import AdminPanel from '@/components/Admin/AdminPanel'
 import React from 'react'
 
-type Props = {}
-
-const page = (props: Props) => {
+const Page = () => {
   return (
-    <AdminPanel/>
+    <AdminPanel />
   )
 }
 
-export default page
+export default Page

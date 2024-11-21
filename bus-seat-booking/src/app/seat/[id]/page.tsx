@@ -3,9 +3,9 @@ import SeatsUI from "@/components/SeatComponent/SeatsUI";
 import { useParams } from "next/navigation";
 import React from "react";
 
-type Props = {};
 
-const page = (props: Props) => {
+
+const Page = () => {
   const { id } = useParams();
   return (
     <div className="bg-[#f4f5ff]">
@@ -14,4 +14,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default Page;

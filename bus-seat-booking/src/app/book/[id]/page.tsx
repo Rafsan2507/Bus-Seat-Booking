@@ -1,15 +1,13 @@
 "use client"
-import SeatBookingForm from '@/components/SeatComponent/SeatBookingForm'
+import React from 'react'
 import { useParams } from 'next/navigation';
-import React, { use } from 'react'
+import SeatBookingForm from '@/components/SeatComponent/SeatBookingForm'
 
-type Props = {}
-
-const page = (props: Props) => {
-  const {id} = useParams();
+export default function Page() {
+  const params = useParams();
+  const id = params.id;
+  
   return (
-    <SeatBookingForm busNumber={id}/>
+    <SeatBookingForm busNumber={id} />
   )
 }
-
-export default page

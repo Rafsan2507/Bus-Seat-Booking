@@ -7,7 +7,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
@@ -17,13 +16,13 @@ import { AppDispatch } from "@/redux/store";
 import { addSeat } from "@/redux/SeatSlice/SeatSlice";
 
 type Props = {
-  busNumber: string | string[] | undefined;
+  busNumber: string | string[] | undefined ;
 };
 
 const SeatBookingForm = ({ busNumber }: Props) => {
   const [name, setName] = useState("");
-  const [busNo, setBusNo] = useState(busNumber);
-  const [seatNo, setSeatNo] = useState("S098");
+  const busNo = busNumber;
+  const seatNo ="S098";
   const [destination, setDestination] = useState("");
   const [time, setTime] = useState("");
   const dispatch = useDispatch<AppDispatch>();

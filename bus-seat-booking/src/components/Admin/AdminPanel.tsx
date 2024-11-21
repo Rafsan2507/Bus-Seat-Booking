@@ -1,19 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
+ 
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
-type Props = {};
 
-const AdminPanel = (props: Props) => {
+
+const AdminPanel = () => {
   const [selectedBus, setSelectedBus] = useState("");
   const router = useRouter();
   const buses = ["S098", "B568", "S897", "A587", "C741", "D125", "E256"];
@@ -23,12 +23,12 @@ const AdminPanel = (props: Props) => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        {/* Admin Panel Header */}
+      
         <div className="text-2xl font-semibold text-center text-gray-700 mb-6">
           Admin Panel
         </div>
 
-        {/* Destination Selection */}
+       
         <div className="mb-4">
           <div className="text-lg font-medium text-gray-600 mb-2">
             SELECT DESTINATION:
@@ -51,7 +51,7 @@ const AdminPanel = (props: Props) => {
           </div>
         </div>
 
-        {/* Button to See Bus Details */}
+       
         {selectedBus && (
           <div className="mt-6 flex justify-center">
             <Button
